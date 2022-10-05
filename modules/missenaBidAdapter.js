@@ -48,6 +48,9 @@ export const spec = {
       if (bidRequest.params.test) {
         payload.test = bidRequest.params.test;
       }
+      if (bidRequest.params.placement) {
+        payload.placement = bidRequest.params.placement;
+      }
       return {
         method: 'POST',
         url: baseUrl + '?' + formatQS({ t: bidRequest.params.apiKey }),
